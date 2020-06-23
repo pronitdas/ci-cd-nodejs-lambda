@@ -52,13 +52,13 @@ jobs:
       uses: actions/cache@v1
       with:
           path: node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
 
     - name: Dependency
       run: npm install serverless
 
     - name: Geronimo
-      run: SLS_DEBUG=* npx sls deploy
+      run: npx sls deploy >> slsoutput.txt
     
     - name: Update output version on s3 
       run: aws s3 cp slsoutput.txt s3://samplenode-pro/${GITHUB_REF##*/}/   

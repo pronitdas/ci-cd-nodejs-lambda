@@ -11,7 +11,7 @@ provider:
   stage: ${opt:stage, 'develop'}
   region: ap-south-1
   environment:
-   ENV: ${self:custom.secrets.NODE_ENV}
+   ENV: ${self:custom.secrets.env}
 # you can add packaging information here
 package:
  include:

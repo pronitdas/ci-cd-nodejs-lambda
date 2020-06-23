@@ -1,0 +1,36 @@
+{
+  "name": "sample-ci-cd-lambda",
+  "version": "0.0.2",
+  "description": ".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sls offline start",
+    "df": "sls deploy function --function"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.3",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.8",
+    "uuid": "^8.1.0",
+    "fs-extra": "^8.1.0",
+    "geostats": "^1.8.0",
+    "lodash": "^4.17.15",
+    "shapefile": "^0.6.6",
+    "shpjs": "^3.4.3",
+    "unzipper": "^0.10.10"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1",
+    "serverless": "^1.73.0",
+    "serverless-offline": "^6.3.0"
+  }
+}
+

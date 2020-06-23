@@ -1,0 +1,28 @@
+
+
+service: sample-node-ci-de
+custom:
+  secrets: ${file(${opt:stage, 'develop'}.json)}
+  layer: ${file(layer.json)}
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'develop'}
+  region: ap-south-1
+  environment:
+   ENV: ${self:custom.secrets.NODE_ENV}
+# you can add packaging information here
+package:
+ include:
+   - handler.js
+   
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: api/v1/{any+}
+          method: get
+    layers:
+      - ${self:custom.layer.LayerArn}

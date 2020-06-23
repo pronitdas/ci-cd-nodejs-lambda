@@ -47,11 +47,18 @@ jobs:
         cd $GITHUB_WORKSPACE
         aws s3 cp s3://samplenode-pro/${GITHUB_REF##*/}/${GITHUB_REF##*/}.json .
         aws s3 cp s3://samplenode-pro/${GITHUB_REF##*/}/layer.json .
+    
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+          path: node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+
+    - name: Dependency
+      run: npm install serverless
 
     - name: Geronimo
-      run: |
-        npm install serverless
-        npx sls deploy >> slsoutput.txt
+      run: SLS_DEBUG=* npx sls deploy
     
     - name: Update output version on s3 
       run: aws s3 cp slsoutput.txt s3://samplenode-pro/${GITHUB_REF##*/}/   

@@ -45,8 +45,8 @@ jobs:
     - name: Get env stuff
       run: |
         cd $GITHUB_WORKSPACE
-        aws s3 cp s3://${GITHUB_REF##*/}/${GITHUB_REF##*/}.json .
-        aws s3 cp s3://${GITHUB_REF##*/}/layer.json .
+        aws s3 cp s3://samplenode-pro/${GITHUB_REF##*/}/${GITHUB_REF##*/}.json .
+        aws s3 cp s3://samplenode-pro/${GITHUB_REF##*/}/layer.json .
 
     - name: Geronimo
       run: |

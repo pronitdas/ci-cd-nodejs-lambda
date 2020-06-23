@@ -25,4 +25,4 @@ functions:
           path: api/v1/{any+}
           method: get
     layers:
-      - ${self:custom.layer.LayerArn}
+      - ${self:custom.layer.LayerVersionArn}

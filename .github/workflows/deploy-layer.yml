@@ -44,4 +44,4 @@ jobs:
       run: cat layer.json
 
     - name: Update layer version on s3 
-      run: aws s3 cp layer.json s3://$GITHUB_REF/  
+      run: aws s3 cp layer.json s3://samplenode-pro/$GITHUB_REF/  

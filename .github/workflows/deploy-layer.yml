@@ -40,13 +40,13 @@ jobs:
       run: cat layer.json
 
     - name: Update layer version on s3 
-      run: aws s3 cp layer.json s3://samplenode-pro/$GITHUB_REF/  
+      run: aws s3 cp layer.json s3://samplenode-pro/${GITHUB_REF##*/}/  
 
     - name: Get env stuff
       run: |
         cd $GITHUB_WORKSPACE
-        aws s3 cp s3://$GITHUB_REF/$GITHUB_REF.json .
-        aws s3 cp s3://$GITHUB_REF/layer.json .
+        aws s3 cp s3://${GITHUB_REF##*/}/${GITHUB_REF##*/}.json .
+        aws s3 cp s3://${GITHUB_REF##*/}/layer.json .
 
     - name: Geronimo
       run: |
@@ -54,4 +54,4 @@ jobs:
         npx sls deploy >> slsoutput.txt
     
     - name: Update output version on s3 
-      run: aws s3 cp slsoutput.txt s3://samplenode-pro/$GITHUB_REF/   
+      run: aws s3 cp slsoutput.txt s3://samplenode-pro/${GITHUB_REF##*/}/   

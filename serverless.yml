@@ -14,8 +14,14 @@ provider:
    ENV: ${self:custom.secrets.env}
 # you can add packaging information here
 package:
- include:
+  include:
    - handler.js
+  exclude:
+    - "output-files/**"
+    - "test-files/**"
+    - "node_modules/**"
+    - "env/**"
+    - '*/**'
    
 functions:
   hello:

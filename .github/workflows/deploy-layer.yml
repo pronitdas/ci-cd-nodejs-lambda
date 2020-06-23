@@ -58,7 +58,7 @@ jobs:
       run: npm install serverless
 
     - name: Geronimo
-      run: npx sls deploy >> slsoutput.txt
+      run: npx sls deploy --stage ${GITHUB_REF##*/} >> slsoutput.txt
     
     - name: Update output version on s3 
       run: aws s3 cp slsoutput.txt s3://samplenode-pro/${GITHUB_REF##*/}/   

@@ -10,4 +10,4 @@ Production deployment is done automatically by Github Actions and is driven by `
 * Voila. Thats it. When you push to master/dev/stage/test. Code will be auto deployed.
 
 
-Checking signing
+Checking signing v1

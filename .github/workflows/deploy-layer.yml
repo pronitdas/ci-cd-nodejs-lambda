@@ -45,7 +45,7 @@ jobs:
     - name: Get env stuff
       run: |
         cd $GITHUB_WORKSPACE
-        aws s3 cp s3://samplenode-pro/develop.json .
+        aws s3 cp s3://samplenode-pro/develop/develop.json .
         aws s3 cp s3://samplenode-pro/develop/layer.json .
     
     - name: Cache node modules

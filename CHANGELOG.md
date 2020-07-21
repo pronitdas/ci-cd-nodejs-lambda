@@ -1,3 +1,12 @@
+## 0.2.2 (2020-07-21)
+
+
+### Bug Fixes
+
+* als ([9c072df](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/9c072dffb36cfe4a23800d595420bd7037cdcda4))
+
+
+
 ## 0.2.1 (2020-07-21)
 
 

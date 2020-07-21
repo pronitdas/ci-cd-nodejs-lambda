@@ -1,3 +1,12 @@
+## 0.2.1 (2020-07-21)
+
+
+### Bug Fixes
+
+* env ([dad2dd6](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/dad2dd6017872ab3090a63bbd516b442ba0e9de4))
+
+
+
 # 0.2.0 (2020-07-21)
 
 

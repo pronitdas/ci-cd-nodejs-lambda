@@ -40,13 +40,13 @@ jobs:
       run: cat layer.json
 
     - name: Update layer version on s3 
-      run: aws s3 cp layer.json s3://samplenode-pro/${GITHUB_REF##*/}/  
+      run: aws s3 cp layer.json s3://samplenode-pro/develop/  
 
     - name: Get env stuff
       run: |
         cd $GITHUB_WORKSPACE
-        aws s3 cp s3://samplenode-pro/${GITHUB_REF##*/}/${GITHUB_REF##*/}.json .
-        aws s3 cp s3://samplenode-pro/${GITHUB_REF##*/}/layer.json .
+        aws s3 cp s3://samplenode-pro/develop.json .
+        aws s3 cp s3://samplenode-pro/develop/layer.json .
     
     - name: Cache node modules
       uses: actions/cache@v1
@@ -58,7 +58,7 @@ jobs:
       run: npm install serverless
 
     - name: Geronimo
-      run: npx sls deploy --stage ${GITHUB_REF##*/} >> slsoutput.txt
+      run: npx sls deploy --stage develop >> slsoutput.txt
     
     - name: Update output version on s3 
-      run: aws s3 cp slsoutput.txt s3://samplenode-pro/${GITHUB_REF##*/}/   
+      run: aws s3 cp slsoutput.txt s3://samplenode-pro/develop/   

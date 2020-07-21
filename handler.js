@@ -5,7 +5,7 @@ module.exports.hello = async event => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: `Your function executed successfully! Env ${process.env.ENV}`,
+        message: `Your lambda fucntion executed successfully! Env ${process.env.ENV}`,
         input: event,
       },
       null,

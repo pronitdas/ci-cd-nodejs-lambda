@@ -14,16 +14,16 @@ jobs:
         node: [14]
     if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: stage
-    
       - uses: actions/setup-node@v1
         with:
           registry-url: "https://registry.npmjs.org"
           node-version: ${{ matrix.node }}
-      
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: stage
+
       - name: cache node_modules
         uses: actions/cache@v1
         with:

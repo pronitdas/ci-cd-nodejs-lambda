@@ -1,13 +1,13 @@
 name: Ship js Manual Prepare
 on:
-  issue_comment:
-    types: [created]
+  pull_request:
+    types: [closed]
+    branches:
+      - stage
 jobs:
   manual_prepare:
     if: |
-      github.event_name == 'issue_comment' &&
-      (github.event.comment.author_association == 'member' || github.event.comment.author_association == 'owner') &&
-      startsWith(github.event.comment.body, '@shipjs prepare')
+      github.base_ref == 'stage' && github.head_ref =='test'   
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

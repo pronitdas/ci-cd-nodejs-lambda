@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.1...v0.3.2) (2020-07-22)
+
+
+### Bug Fixes
+
+* readme ([37057ac](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/37057acdd57b409f3752e660b0a6e486e62fc519))
+
+
+
 ## 0.3.1 (2020-07-22)
 
 

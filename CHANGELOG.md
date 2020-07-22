@@ -1,3 +1,12 @@
+## [0.3.7](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.5...v0.3.7) (2020-07-22)
+
+
+### Bug Fixes
+
+* ship js trigger and prepare files ([621cc76](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/621cc7613ae2fff895d07d9b6c6e0ff9e28b1ac9))
+
+
+
 ## [0.3.6](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.5...v0.3.6) (2020-07-22)
 
 

@@ -1,3 +1,13 @@
+## [0.3.8](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.7...v0.3.8) (2020-07-22)
+
+
+### Bug Fixes
+
+* add auto prepare ([7d66ef5](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/7d66ef517c019370d4164dcd30ca3552ed733689))
+* add closed activity type ([7212080](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/721208056f634e1becb5a1cf130d33e918e7d9e4))
+
+
+
 ## [0.3.7](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.5...v0.3.7) (2020-07-22)
 
 

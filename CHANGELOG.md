@@ -1,3 +1,12 @@
+## [0.3.10](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.9...v0.3.10) (2020-07-22)
+
+
+### Bug Fixes
+
+* remove personal token ([684195a](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/684195a394f28c1173023bb48f02aa20e4b8777c))
+
+
+
 ## [0.3.9](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.8...v0.3.9) (2020-07-22)
 
 

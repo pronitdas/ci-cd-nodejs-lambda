@@ -6,10 +6,10 @@ module.exports = {
     exec('git config --global user.name "github-actions[bot]"');
     exec('git -c protocol.version=2 fetch --prune --progress --no-recurse-submodules origin test stage develop');
     exec('git checkout test');
-    exec('git rebase stage');
+    exec('git rebase origin/stage');
     exec('git push origin test');
     exec('git checkout develop');
-    exec('git rebase test');
+    exec('git rebase origin/test');
     exec('git push origin develop');
   },
 };

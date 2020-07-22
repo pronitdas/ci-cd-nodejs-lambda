@@ -7,22 +7,23 @@ on:
 jobs:
   manual_prepare:
     if: |
-      github.base_ref == 'stage' && github.head_ref =='test'   
+     github.event.pull_request.merged == true && github.base_ref == 'stage' && github.head_ref =='test'   
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest]
         node: [14]
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: stage
       - uses: actions/setup-node@v1
         with:
           registry-url: "https://registry.npmjs.org"
           node-version: ${{ matrix.node }}
-      
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: stage
+          
       - name: cache node_modules
         uses: actions/cache@v1
         with:

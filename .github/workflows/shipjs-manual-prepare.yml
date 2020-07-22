@@ -1,6 +1,7 @@
 name: Ship js Manual Prepare
 on:
   pull_request:
+    types: [closed]
     branches:
       - stage
 jobs:

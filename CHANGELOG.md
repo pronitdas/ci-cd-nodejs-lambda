@@ -1,3 +1,25 @@
+# 0.3.0 (2020-07-22)
+
+
+### Bug Fixes
+
+* actions auth ([2fe069a](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/2fe069a62bc2c3a70745c2b027656a6b23e396be))
+* als ([294bc22](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/294bc228c30d42c309b41eb4f8adf9aec67afba6))
+* als ([2ad101f](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/2ad101fa76e1595908f805d87c5378591ed64122))
+* change ([b17c23f](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/b17c23f7a7c8c87b9d61e4951fa68be6c5e2d2da))
+* env ([1d15aa2](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/1d15aa280568810020c38dd8ec52dcae11ef9e13))
+* make static ([662c748](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/662c74873eba194e72624da0b1383f5d3daa0141))
+* signing ([d51a8ca](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/d51a8ca6825257b196c5ce61d8a9aaa5ac2bbb9c))
+* signing ([c5af1c2](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/c5af1c2da56d303d798e6602d4d573da92e4da4b))
+
+
+### Features
+
+* add ship js ([c9405bb](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/c9405bbb699808cf63d4eacc129c2f7a393c31f0))
+* release ([5285e93](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/5285e93fb868374d75376414432604faff57111f))
+
+
+
 ## 0.2.3 (2020-07-21)
 
 

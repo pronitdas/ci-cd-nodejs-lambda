@@ -4,12 +4,12 @@ module.exports = {
   afterPublish: ({ exec }) => {
     exec('git config --global user.email "github-actions[bot]@users.noreply.github.com"');
     exec('git config --global user.name "github-actions[bot]"');
-    exec('git fetch --all');
+    exec('git -c protocol.version=2 fetch --prune --progress --no-recurse-submodules origin test stage develop');
     exec('git checkout test');
     exec('git rebase stage');
     exec('git push origin test');
-    exec('git checkout dev');
+    exec('git checkout develop');
     exec('git rebase test');
-    exec('git push origin dev');
+    exec('git push origin develop');
   },
 };

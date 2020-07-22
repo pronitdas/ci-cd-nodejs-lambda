@@ -1,3 +1,12 @@
+## [0.3.4](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.3...v0.3.4) (2020-07-22)
+
+
+### Bug Fixes
+
+* sls service name changed ([aea42bb](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/aea42bb6eb22e4f04f103c76cab5649f2aff89a7))
+
+
+
 ## [0.3.3](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.1...v0.3.3) (2020-07-22)
 
 

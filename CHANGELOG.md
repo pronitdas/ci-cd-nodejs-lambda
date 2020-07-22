@@ -1,3 +1,7 @@
+## [0.3.6](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.5...v0.3.6) (2020-07-22)
+
+
+
 ## [0.3.5](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.4...v0.3.5) (2020-07-22)
 
 

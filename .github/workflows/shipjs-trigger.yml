@@ -6,22 +6,33 @@ on:
 jobs:
   build:
     name: Release
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
     if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          ref: develop
+          ref: stage
+    
       - uses: actions/setup-node@v1
         with:
           registry-url: "https://registry.npmjs.org"
-      - run: |
-          if [ -f "yarn.lock" ]; then
-            yarn install
-          else
-            npm install
-          fi
+          node-version: ${{ matrix.node }}
+      
+      - name: cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+
+      - name: install
+        run: npm ci
+
       - run: npx shipjs trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN_PRO }}

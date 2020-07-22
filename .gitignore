@@ -8,3 +8,4 @@ develop.json
 master.json
 stage.json
 test.json
+.env

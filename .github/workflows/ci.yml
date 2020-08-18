@@ -1,0 +1,50 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - develop
+      - test
+      - stage
+      - main
+  pull_request:
+    branches:
+      - develop
+      - test
+      - stage
+      - main
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - name: Checkout latest code
+        uses: actions/checkout@v2
+
+      - name: Setup node environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm i
+
+      - name: Check for any linting errors
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test

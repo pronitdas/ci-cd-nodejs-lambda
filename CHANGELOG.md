@@ -1,3 +1,22 @@
+# [0.4.0](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.12...v0.4.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* added ci for linting ([8701273](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/8701273fd1e3234826b7b18a709a25ebc88f2c21))
+* added linting ([6130bc5](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/6130bc5453edc1bea75155f000e5cd85f1112fb4))
+* cache id ([7acb9f8](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/7acb9f84147bb446a68bafa94cdafde80107c1c3))
+* cache id ([4538299](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/4538299154848b53243bb82c9282a66db9c3ddc0))
+* linting ([acd897e](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/acd897e25aa76eb7ce02d1cb680ff251fadff87e))
+* npm cache issue ([492ceb8](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/492ceb818659d9dbbca7174b38511c4e0055213d))
+
+
+### Features
+
+* added test cases ([ee678e1](https://github.com/pronitdas/ci-cd-nodejs-lambda/commit/ee678e18aad4d233757a9ccd046d5dccc9157bb8))
+
+
+
 ## [0.3.12](https://github.com/pronitdas/ci-cd-nodejs-lambda/compare/v0.3.11...v0.3.12) (2020-07-22)
 
 

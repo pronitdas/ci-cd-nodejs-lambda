@@ -4,11 +4,11 @@
   "description": ".",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "sls offline start",
     "df": "sls deploy function --function",
     "release": "shipjs prepare",
-    "lint": "eslint handler.js"
+    "lint": "eslint handler.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git"
@@ -38,6 +38,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "sequelize-cli": "^5.5.1",
+    "mocha": "^8.1.1",
     "serverless": "^1.73.0",
     "serverless-offline": "^6.3.0",
     "shipjs": "0.20.1"

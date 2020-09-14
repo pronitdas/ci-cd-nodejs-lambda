@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@geospoc/gqi-event-bus": "^1.2.1",
     "fs-extra": "^8.1.0",
     "geostats": "^1.8.0",
     "jsonwebtoken": "^8.5.1",

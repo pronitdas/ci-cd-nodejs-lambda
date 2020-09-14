@@ -13,7 +13,7 @@
   "repository": {
     "type": "git"
   },
-  "author": "",
+  "author": "Pronit das",
   "license": "ISC",
   "dependencies": {
     "@geospoc/gqi-event-bus": "^1.2.1",

@@ -1,6 +1,6 @@
 
 
-service: sample-node-ci-deploy
+service: node-ci-deploy
 custom:
   secrets: ${file(${opt:stage, 'develop'}.json)}
   layer: ${file(layer.json)}

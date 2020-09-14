@@ -35,6 +35,7 @@ jobs:
           scope: '@geospoc'
 
       - uses: actions/cache@v2
+        id: npm-cache
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -42,7 +43,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm i
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GIT_TOKEN_PRO }}

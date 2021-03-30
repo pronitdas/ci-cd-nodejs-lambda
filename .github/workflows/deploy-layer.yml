@@ -30,7 +30,7 @@ jobs:
          cp package.json dist/nodejs
          cp package-lock.json dist/nodejs
          cd dist/nodejs
-         npm ci --only=production
+         npm ci --only=production --no-optional
          cd ..
          zip -r /tmp/lambda-layer.zip nodejs
 
